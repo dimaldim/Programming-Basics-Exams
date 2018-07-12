@@ -1,0 +1,37 @@
+<?php
+
+$pizzaType = readline();
+$pizzaSize = readline();
+$sos = readline();
+$qty = intval(readline());
+
+if($sos == "tomato") {
+    $sosPrice = 1.50;
+} elseif($sos == "garlic") {
+    $sosPrice = 1.70;
+} elseif($sos == "special") {
+    $sosPrice = 2.50;
+} elseif($sos == "none") {
+    $sosPrice = 0.00;
+}
+if ($pizzaType == "with meat") {
+    if ($pizzaSize == "small") {
+        $pizzaPrice = 7.50;
+    } elseif ($pizzaSize == "big") {
+        $pizzaPrice = 11;
+    }
+} elseif ($pizzaType == "vegan") {
+    if ($pizzaSize == "small") {
+        $pizzaPrice = 3.90;
+    } elseif($pizzaSize == "big") {
+        $pizzaPrice = 5.45;
+    }
+} elseif ($pizzaType == "vegetarian") {
+    if($pizzaSize == "small") {
+        $pizzaPrice = 5.50;
+    } elseif($pizzaSize == "big") {
+        $pizzaPrice = 7.20;
+    }
+}
+$total = ($pizzaPrice + $sosPrice) * $qty;
+printf("%.2flv.", $total);
