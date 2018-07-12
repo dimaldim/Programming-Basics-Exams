@@ -1,0 +1,16 @@
+<?php
+
+$tomato = floatval(readline()) * 1000;
+$cherry = floatval(readline()) * 1000;
+$maruli = intval(readline());
+$kashu = floatval(readline()) * 1000;
+
+$tomatoTotal = $tomato - ($tomato * 0.10);
+$cherryTotal = $cherry - ($cherry * 0.10);
+$maruliTotal = $maruli - 1;
+
+$tomatoSum = ($tomatoTotal / 1000) * 2.79;
+$cherrySum = ($cherryTotal / 1000) * 30.00;
+$maruliSum = $maruliTotal * 1.20;
+$kashuSum = ($kashu / 100) * 2.20;
+printf("Final sum is: %.2f lv.", $tomatoSum + $cherrySum + $maruliSum + $kashuSum);
