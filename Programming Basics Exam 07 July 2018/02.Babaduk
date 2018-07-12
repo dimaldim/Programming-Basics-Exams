@@ -1,0 +1,19 @@
+<?php
+$tedi = floatval(readline());
+$silveto = floatval(readline());
+$radi = floatval(readline());
+$asen = floatval(readline());
+
+$tediTotal = $tedi - ($tedi * 10 / 100);
+$silvetoTotal = $silveto - ($silveto * 5 / 100);
+
+$girlsTotal = $tediTotal + $silvetoTotal;
+$boysTotal = ($radi + $asen) - ($radi + $asen) / 6;
+$diff = abs($girlsTotal - $boysTotal);
+ if($girlsTotal > $boysTotal) {
+     printf("GIRLS WIN\nDifference: %d", floor($diff));
+ } elseif ($boysTotal > $girlsTotal) {
+     printf("BOYS WIN\nDifference: %d", floor($diff));     
+ } elseif ($boysTotal == $girlsTotal) {
+     printf("EQUAL: %d", floor($girlsTotal));        
+ }
